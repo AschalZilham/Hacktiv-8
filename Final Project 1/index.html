@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------------- BOX ICON -------------------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-------------------- CSS -------------------->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Final Project 1 - Aschal Zilham</title>
+
+    <!-------------------- CSS SLICK-------------------->
+    <link rel="stylesheet" type="text/css" href="./slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick-theme.css">
+
+</head>
+<body>
+    <!-------------------- SCROLL TOP -------------------->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop_icon'></i>
+    </a>
+
+    <!-------------------- HEADER -------------------->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <div class="nav_toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <a href="#" class="nav_logo">Converse</a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#home" class="nav_link active-link">Home</a></li>
+                    <li class="nav_item"><a href="#contact" class="nav_link">Contact Us</a></li>
+                    <li class="nav_item"><a href="#about" class="nav_link">About Us</a></li>
+                    <li class="nav_item"><a href="#products" class="nav_link">Product</a></li>
+                    <li class="nav_item"><a href="#portofolio" class="nav_link">Portofolio</a></li>
+                    <li class="nav_item"><a href="#blog" class="nav_link">Blog</a></li>
+                    <li class="nav_item"><a href="#todos" class="nav_link">Todos</a></li>
+
+                    <li><i class='bx bx-toggle-left change-theme' id='theme-button'></i></li>
+                </ul>
+            </div>
+
+            <div class="nav_shop" id="nav-shop">
+                <i class="bx bx-shopping-bag"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+    <!-------------------- HOME -------------------->
+    <section class="home" id="home">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="home_container bd-container bd-grid" >
+                    <div class="home_data">
+                        <h1 class="home_title">Converse Glosy</h1>
+                        <h2 class="home_subtitle">Converse yang berkolaborasi dengan Desainer Feng Cheng Wang & JW Anderson</h2>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                    <img src="./assets/sepatu1.png" alt=" " class="home_img">
+                </div>  
+            </div>
+
+            <div class="mySlides fade">
+                <div class="home_container bd-container bd-grid" >
+                    <div class="home_data">
+                        <h1 class="home_title">Converse Chuck Taylor Pop Bright</h1>
+                        <h2 class="home_subtitle">Sepatu Converse ini mengusung gaya pop dengan perpaduan warna yang cukup mencolok</h2>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                    <img src="./assets/sepatu2.png" alt=" " class="home_img">
+                </div>  
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="home_container bd-container bd-grid" >
+                    <div class="home_data">
+                        <h1 class="home_title">Stussy x Converse Chuck Taylor</h1>
+                        <h2 class="home_subtitle">Stussy berkolaborasi dengan Converse dengan putaran mereka pada Converse CX-Pro Ox</h2>
+                        <a href="#" class="button">Order Now</a>
+                    </div>
+                    <img src="./assets/sepatu3.png" alt=" " class="home_img">
+                </div>  
+            </div>
+        </div>
+        <br>
+    </section>
+        <!--Next and Previews Buttons-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <!--The dots/circles-->
+            <div style="text-align: center">
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+                <span class="dot"></span>
+            </div>
+
+    <!-------------------- CONTACT US -------------------->
+    <section class="contact section bd-container" id="contact">
+        <div class="contact_container bd-grid">
+            <div class="contact_data">
+                <span class="section-subtitle contact_initial">Contact Us</span>
+                <h2 class="section-title contact_initial">Let's Talk!</h2>
+                <p class="contact_description">Jika kalian ingin membeli Sepatu Converse original dan harga terjangkau, hubungi kami dan kami akan segera melayani kalian dengan layanan 24 jam</p>
+            </div>
+            <div class="contact_button">
+                <a href="#" class="button">Contact Us Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-------------------- ABOUT US -------------------->
+    <section class="about section bd-container" id="about">
+        <div class="about_container bd-grid">
+            <div class="about_data">
+                <span class="section-subtitle about_initial">About Us</span>
+                <h2 class="section-title about_initial">We Create The Best <br> Life Style Wear </h2>
+                <p class="about_description">Converse telah membuat sepatu kets Chuck Taylor All Star dan One Star sejak kami memulai lebih dari satu abad yang lalu, 
+                    dan sekarang kami bekerja untuk membuat klasik gaya jalanan baru. Apa yang Anda kenakan mendefinisikan olahraga, jalanan, dan budaya kreatif.
+                    Saat Anda memakai produk Converse, Anda menciptakan budaya gaya jalanan autentik hanya dengan menjadi diri sendiri.</p>
+                <a href="#" class="button">Explore History</a>
+            </div>
+            <img src="./assets/aboutus.jpg" alt="" class="about_img">
+        </div>
+    </section>
+
+    <!-------------------- PRODUCT -------------------->
+    <section class="product section bd-container" id="products">
+        <span class="section-subtitle">Product Reguler Converse</span>
+        <h2 class="section-title">Product Reguler Special Taste</h2>
+
+        <div class="products_container bd-grid logo-slider slick_two">
+            <div class="products_content">
+                <img src="./assets/product1.png" alt="" class="products_img">
+                <h3 class="products_name">Converse Cons</h3>
+                <span class="products_detail">Low Cut</span><br>
+                <span class="products_price">Rp. 679.000</span>
+                <a href="#" class="button products_button_detail">Detail Product</a>
+                <a href="#" class="button products_button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+    
+            <div class="products_content">
+                <img src="./assets/product2.png" alt="" class="products_img">
+                <h3 class="products_name">Converse Clasic Chuck</h3>
+                <span class="products_detail">High Cut</span><br>
+                <span class="products_price">Rp. 759.000</span>
+                <a href="#" class="button products_button_detail">Detail Product</a>
+                <a href="#" class="button products_button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+    
+            <div class="products_content">
+                <img src="./assets/product3.png" alt="" class="products_img">
+                <h3 class="products_name">Converse x Basquiat</h3>
+                <span class="products_detail">High Cut</span><br>
+                <span class="products_price">Rp. 2.650.000</span>
+                <a href="#" class="button products_button_detail">Detail Product</a>
+                <a href="#" class="button products_button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+    
+            <div class="products_content">
+                <img src="./assets/product4.png" alt="" class="products_img">
+                <h3 class="products_name">Converse All Star Black</h3>
+                <span class="products_detail">Low Cut</span><br>
+                <span class="products_price">Rp. 285.000</span>
+                <a href="#" class="button products_button_detail">Detail Product</a>
+                <a href="#" class="button products_button"><i class='bx bx-cart-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-------------------- PORTOFOLIO -------------------->
+
+
+    <!-------------------- BLOG -------------------->
+
+
+    <!-------------------- TODOS -------------------->
+    <section class="todos section bd-container" id="todos">
+        <span class="section-subtitle">To Do List</span>
+        <h2 class="section-title">Come on, name your favorite type of converse!</h2>
+        <div class="todo-list">
+            <div class="list-head">
+                <input type="text" class="entered-list">
+                <button class="add-list" > Add </button>
+            </div>
+
+            <div class="tasks">
+                <!-- <div class="item">
+                   <p>New Item Here</p>
+                    <div class="item-btn">
+                        <i class='bx bxs-edit'></i>
+                        <i class='bx bx-x' ></i>
+                    </div> 
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+    </main>
+
+    <!-------------------- FOOTER -------------------->
+    <footer class="footer section bd-container">
+        <div class="footer_container bd-grid">
+            <div class="footer_content">
+                <a href="#" class="footer_logo">Converse</a>
+                <span class="footer_description">Store</span>
+            </div>
+            <div>
+                <a href="#" class="footer_social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="footer_social"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#" class="footer_social"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="footer_social"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Service</h3>
+                <ul>
+                    <li><a href="#" class="footer_link">Shipping and Returns</a></li>
+                    <li><a href="#" class="footer_link">Mesurement Guide</a></li>
+                    <li><a href="#" class="footer_link">Size Conversion Chart</a></li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Information</h3>
+                <ul>
+                    <li><a href="#" class="footer_link"></a>Event</li>
+                    <li><a href="#" class="footer_link"></a>Contact Us</li>
+                    <li><a href="#" class="footer_link"></a>Privacy Policy</li>
+                    <li><a href="#" class="footer_link"></a>Terms of Services</li>
+                </ul>
+            </div>
+            <div class="footer_content">
+                <h3 class="footer_title">Address</h3>
+                <ul>
+                    <li>Jl. Bukit Duri Tanjakan RT.001/009</li>
+                    <li>Jakarta Selatan - Indonesia</li>
+                    <li>Phone : +62 812-8735-9912</li>
+                    <li>Whatsapp : +62 852-1576-3733</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer_copy">&#169; 2022 Aschal Zilham, All right reserved</p>
+    </footer>
+
+    <!-------------------- SCROLL REVEAL -------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <!-------------------- MAIN JS -------------------->
+    <script src="./main.js"></script>
+
+    <!-------------------- JS SLICK -------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./slick.js"></script>
+    <script src="./slick.min.js"></script>
+
+    <script>
+        const sr = $scrollReveal ({
+            origin: 'top',
+            distance: '30px',
+            duration: 2000,
+            reset: true
+        })
+
+        sr.reveal(` .home, .contact_data, .contact_button, .about_data, .about_img, .products, .footer_content, .detail_img, .detail_data`, {
+            interval:200
+        })
+        
+        $('.slick_two').slick({
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            infiniite: true,
+            speed: 2000,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                breakpoint: 5000,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    </script>
+</body>
+</html>

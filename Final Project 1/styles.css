@@ -1,0 +1,694 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Poppins:wght@600&display=swap');
+
+/*==================== VARIABEL CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+/*==================== COLORS ====================*/
+    --first-color: #012d80;
+    --first-color-alt: #021a47;
+    --title-color: #393939;
+    --text-color: #707070;
+    --text-color-light: #a6a6a6;
+    --body-color: #fbfefd;
+    --container-color: #fff;
+
+/*==================== FONT AND TYPOGRAPHY ====================*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --smal-font-size: 813rem;
+    --smaller-font-size: 75rem;
+    --smallest-font-size: .55rem;
+
+/*==================== FONT WEIGHT ====================*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+/*==================== MARGIN ====================*/
+    --mb-1: .5rem;
+    --mb-2: 1.5rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+/*==================== Z INDEX ====================*/
+    --z-tolltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --smal-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*==================== BASE ====================*/
+    *,::before, ::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+/*==================== VARIABEL DARK THEME ====================*/
+    body.dark-theme {
+        --title-color: #F1F3F2;
+        --text-color: #C7D1CC;
+        --body-color: #0f0e20;
+        --container-color: #21233b;
+    }
+
+/*==================== BUTTON DARK/LIGHT ====================*/
+    .change-theme {
+        position: absolute;
+        right: 1.5rem;
+        top: 2.2rem;
+        display: flex;
+        color: var(--text-color);
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    body {
+        margin: var(--header-height) 0 0 0;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        background-color: var(--body-color);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+    h1, h2, h3, p, ul {
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+/*==================== CLASS CSS ====================*/
+    .section {
+        padding: 4rem 0 2rem;
+    }
+
+    .section-title, .section-subtitle {
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: var(--h1-font-size);
+        color: var(--title-color);
+        margin-bottom: var(--mb-3);
+    }
+
+    .section-subtitle {
+        display: block;
+        color: var(--first-color);
+        font-weight: var(--font-medium);
+        margin-bottom: var(--mb-1);
+    }
+
+/*==================== LAYOUT ====================*/
+    .bd-container {
+        max-width: 960px;
+        width: calc(100% - 2rem);
+        margin-left: var(--mb-2);
+        margin-right: var(--mb-2);
+    }
+
+    .bd-grid {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .l-header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--body-color);
+    }
+
+/*==================== NAV ====================*/
+
+    .nav {
+        max-width: 1024px;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav_menu {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0 1rem;
+            text-align: center;
+            background-color: var(--body-color);
+            transition: .4s;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+            border-radius: 0 0 1rem 1rem;
+            z-index: var(--z-fixed);
+        }
+    }
+
+    .nav_item{
+        margin-bottom: var(--mb-2);
+    }
+
+    .nav_link, .nav_logo, .nav_toggle, .nav_shop {
+        color: var(--text-color);
+        font-weight: var(--font-medium);
+    }
+
+    .nav_logo:hover {
+        color: var(--first-color);
+    }
+
+    .nav_link {
+        transition: .3s;
+    }
+
+    .nav_link:hover {
+        color: var(--first-color);
+    }
+
+    .nav_toggle, .nav_shop{
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+
+/*==================== SHOW MENU ====================*/
+    .show-menu {
+        top: var(--header-height);
+    }
+
+/*==================== ACTIVITY MENU ====================*/
+    .active-link {
+        color: var(--first-color);
+    }
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+    .scrollHeader {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    }
+
+/*==================== SCROLL TOP ====================*/
+    .scrolltop {
+        position: fixed;
+        right: 1rem;
+        bottom: -20%;
+        display: flex;
+        justify-content: center;
+        padding: .3rem;
+        background: var(--first-color);
+        border-radius: .4rem;
+        z-index: var(--z-tolltip);
+        transition: .4s;
+        visibility: hidden;
+    }
+
+    .scrolltop:hover {
+        background-color: var(--first-color-alt);
+    }
+
+    .scrolltop_icon {
+        font-size: 1.8rem;
+        color: var(--body-color);
+    }
+
+/*==================== SHOW SCROLLTOP ====================*/
+    .show-scroll {
+        visibility: visible;
+        bottom: 1.5rem;
+    }
+
+/*==================== HOME ====================*/
+    .home_container {
+        height: calc(100vh - var(--header-height));
+        align-content: center;
+    }
+
+    .home_title {
+        font-size: var(--biggest-font-size);
+        color: var(--first-color);
+        margin-bottom: var(--mb-1);
+    }
+
+    .home_subtitle {
+        font-size: var(--h2-font-size);
+        color: var(--title-color);
+        margin-bottom: var(--mb-4);
+    }
+
+    .home_img {
+        width: 300px;
+        justify-self: center;
+    }
+
+/*==================== BUTTONS ====================*/
+    .button {
+        display: inline-block;
+        background-color: var(--first-color);
+        color: #fff;
+        padding: .75rem 1rem;
+        border-radius: .5rem;
+        transition: .3s;
+    }
+
+    .button:hover {
+        background-color: var(--first-color-alt);
+    }
+
+/*==================== SLIDDE SHOW ====================*/
+    * {box-sizing: border-box}
+
+    /* Slideshow- container */
+    .slideshow-container {
+        max-width: 1000px;
+        height: auto;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by :default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Next & Previous button */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 75%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: var(--first-color);
+        font-weight: bold;
+        font-size: 13px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position The "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: var(--first-color-alt);
+        color: #fff;
+    }
+
+    /* Number text (1/3 etc) */
+    .numberText {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dots {
+        cursor: pointer;
+        height: 8px;
+        width: 8px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dots:hover {
+        background-color: #717171;
+    }
+
+    /* Fadding animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+/*==================== CONTACT US ====================*/
+    .contact_container {
+        text-align: center;
+    }
+
+    .contact_description {
+        margin-bottom: var(--mb-3);
+    }
+
+/*==================== ABOUT US ====================*/
+    .about_data {
+        text-align: center;
+    }
+
+    .about_description {
+        margin-bottom: var(--mb-3);
+    }
+
+    .about_img {
+        width: 500px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+
+/*==================== PRODUCT ====================*/
+    .products_container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .products_content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--container-color);
+        border-radius: .5rem;
+        box-shadow: 0 2px 4px rgb(3, 74, 40, .15);
+        padding: .75rem .75rem 3rem .75rem;
+    }
+
+    .products_content:hover {
+        background-color: rgba(201, 196, 196, .3);
+        transition: .3s;
+    }
+
+    .products_img {
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;;
+        margin-bottom: var(--mb-2);
+        filter: drop-shadow(0 5px 2px rgba(80, 79, 79, .2));
+    }
+
+    .products_name, .products_price {
+        font-weight: var(--font-semi-bold);
+        color: var(--title-color);
+    }
+
+    .products_name {
+        font-size: var(--normal-font-size);
+    }
+
+    .products_detail, .products_price {
+        font-size: var(--small-font-size);
+    }
+
+    .products_price {
+        margin-bottom: var(--mb-4);
+    }
+
+    .products_detial {
+        margin-bottom: var(--mb-1);
+    }
+
+    .products_button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        padding: .625rem .813rem;
+        border-radius: .5rem 0 .5rem 0;
+    }
+
+    .products_button_detail {
+        font-size: var(--smallest-font-size);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        padding: .625rem .813rem;
+        border-radius: 0 .5rem 0 .5rem;
+    }
+
+/*==================== SLICK ====================*/
+    .slick_two {
+        width: 90%;
+        margin: auto;
+    }
+
+/*==================== PORTOFOLIO ====================*/
+
+/*==================== BLOG ====================*/
+
+/*==================== TODOS ====================*/
+.todo-list {
+    width: 450px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.list-head {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+}
+
+.entered-list {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-list {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(8, 6, 133);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    opacity: .6;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.add-list.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tasks {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.item {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.item.completed p {
+    text-decoration: line-through;
+    color: #11111180;
+}
+
+.item-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-btn i {
+    color: rgb(8, 6, 133);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*==================== FOOTER ====================*/
+    .footer_container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 2rem;
+    }
+
+    .footer_logo {
+        font-size: var(--h3-font-size);
+        color: var(--first-color);
+        font-weight: var(--font-semi-bold);
+    }
+
+    .footer_description {
+        display: block;
+        font-size: var(--small-font-size);
+        margin: .25rem 0 var(--mb-3);
+    }
+
+    .footer_social {
+        font-size: 1.5rem;
+        color: var(--title-color);
+        margin-right: var(--mb-2);
+    }
+
+    .footer_title {
+        font-size: var(--h2-font-size);
+        color: var(--title-color);
+        margin-bottom: var(--mb-2);
+    }
+
+    .footer_link {
+        display: inline-block;
+        color: var(--text-color);
+        margin-bottom: var(--mb-1);
+    }
+
+    .footer_link:hover {
+        color: var(--first-color);
+    }
+
+    .footer_copy {
+        text-align: center;
+        font-size: var(--small-font-size);
+        color: var(--text-color-light);
+        margin-top: 3.5rem;
+    }
+    
+/*==================== MEDIA QUERIES ====================*/
+@media screen and (min-width: 576px) {
+    .home_container,
+    .contact_container,
+    .about_container {
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+
+.prev, .next {
+    top: 50%;
+}
+
+.home {
+    margin-left: var(--mb-4);
+    margin-right: var(--mb-4);
+}
+
+.contact_data, .contact_initial,
+.about_data, .about_initial {
+    text-align: initial;
+}
+
+.about_img {
+    width: 380px;
+    order: -1;
+}
+
+.contact_container {
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+}
+
+.contact_button {
+    justify-self: center;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding-top: 8rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav_list {
+        display: flex;
+    }
+
+    .nav_item {
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+
+    .nav_toggle {
+        display: none;
+    }
+
+    .home_container {
+        height: 100vh;
+        justify-items: center;
+    }
+
+    .products_container {
+        margin-top: var(--mb-6);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home_img {
+        width: 500px;
+    }
+}
+
+/*==================== FOR TALL SCREEN ON MOBILE DESKTOP ====================*/
